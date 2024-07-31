@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 128px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoName {
+  font-weight: 500;
+  font-size: 20px;
+  color: #121417;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.navLink {
+  font-size: 16px;
+  color: #121417;
+}
+
+.navLink:is(:hover, :focus) {
+  color: rgba(18, 20, 23, 0.5);
+}
+
+.auth {
+  display: flex;
+  gap: 16px;
+}
+
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  color: #121417;
+}
+
+.registerBtn {
+  border-radius: 12px;
+  border: none;
+  padding: 14px 39px;
+  background-color: #121417;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.registerBtn:is(:hover, :focus) {
+  background-color: rgba(18, 20, 23, 0.5);
+}
+
+.loginBtn:is(:hover, :focus) {
+  color: rgba(18, 20, 23, 0.5);
+}

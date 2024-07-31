@@ -1,0 +1,39 @@
+.mainInfo {
+  display: flex;
+  gap: 24px;
+}
+
+.mainDiv {
+  padding: 98px 108px 98px 64px;
+  max-width: 720px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 48px;
+  color: #121417;
+}
+
+.titleSpan {
+  font-weight: 400;
+  font-style: italic;
+  background-color: #fbe9ba;
+  border-radius: 12px;
+}
+
+.text {
+  font-size: 16px;
+  color: #121417;
+  margin-top: 32px;
+}
+
+.startBtn {
+  padding: 16px 88px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f4c550;
+  color: #121417;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 64px;
+}
