@@ -19,7 +19,7 @@ export const Home = () => {
           <button className={css.startBtn}>Get started</button>
         </div>
         <div>
-          <img alt="Girl with laptop" src={mainImg} />
+          <img className={css.mainPic} alt="Girl with laptop" src={mainImg} />
         </div>
       </section>
       <section>
