@@ -1,14 +1,21 @@
 import { useSelector } from 'react-redux';
 import { Home } from '../components/Home/Home';
 import { Login } from '../components/Modal/Login';
-import { isShowModalSelector } from '../redux/selectors/mainSelectors';
+import {
+  isShowLoginModalSelector,
+  isShowSignupModalSelector,
+} from '../redux/selectors/mainSelectors';
+import { Signup } from '../components/Modal/Signup';
 
 export const HomePage = () => {
-  const showModal = useSelector(isShowModalSelector);
+  const showLoginModal = useSelector(isShowLoginModalSelector);
+  const showSignupModal = useSelector(isShowSignupModalSelector);
+
   return (
     <>
       <Home />
-      {showModal && <Login />}
+      {showLoginModal && <Login />}
+      {showSignupModal && <Signup />}
     </>
   );
 };

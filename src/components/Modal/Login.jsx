@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { closeModal } from '../../redux/features/slice';
+
 import { useRef } from 'react';
+import css from './Auth.module.css';
+import { closeLoginModal } from '../../redux/features/slice';
 
 export const Login = () => {
   const dispatch = useDispatch();
@@ -8,7 +10,7 @@ export const Login = () => {
 
   const closeModalBack = (e) => {
     if (modalRef.current === e.target) {
-      dispatch(closeModal());
+      dispatch(closeLoginModal());
     }
   };
 
@@ -18,11 +20,12 @@ export const Login = () => {
       onClick={closeModalBack}
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
-      <div className="w-566 flex flex-col p-16 bg-white rounded-30px">
+      <div className="relative w-566 flex flex-col p-16 bg-white rounded-30px">
         <button
           onClick={() => {
-            dispatch(closeModal());
+            dispatch(closeLoginModal());
           }}
+          className="absolute top-7 right-7"
         >
           X
         </button>
@@ -33,10 +36,22 @@ export const Login = () => {
           Welcome back! Please enter your credentials to access your account and
           continue your search for an teacher.
         </p>
-        <form className="flex flex-col">
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-          <button type="submit">Log In</button>
+        <form className="flex flex-col gap-5">
+          <input
+            className={css.loginField}
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            className={css.loginField}
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <button className={css.loginBtn} type="submit">
+            Log In
+          </button>
         </form>
       </div>
     </div>

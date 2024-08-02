@@ -1,0 +1,26 @@
+.loginBtn,
+.signupBtn {
+  margin-top: 40px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #f4c550;
+  color: #121417;
+}
+
+.loginBtn {
+  padding: 16px 193.5px;
+}
+
+.signupBtn {
+  padding: 16px 187.5px;
+}
+
+.loginField {
+  padding-left: 18px;
+  width: 438px;
+  height: 54px;
+  border-radius: 12px;
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  color: #121417;
+}
