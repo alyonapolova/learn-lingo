@@ -1,17 +1,10 @@
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import css from './AppNav.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../redux/features/authSlice';
-import { isLoggedInSelector } from '../../redux/selectors/authSelectors';
-import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { showModal } from '../../redux/features/slice';
 
 export const AppNav = () => {
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector(isLoggedInSelector);
-
-  const onLogin = () => {
-    dispatch(login());
-  };
 
   return (
     <header className={css.header}>
@@ -50,7 +43,12 @@ export const AppNav = () => {
         </NavLink>
       </nav>
       <div className={css.auth}>
-        <button className={css.loginBtn} onClick={onLogin()}>
+        <button
+          className={css.loginBtn}
+          onClick={() => {
+            dispatch(showModal());
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
