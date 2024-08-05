@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const slice = createSlice({
-  name: 'fav',
+  name: 'mainSlice',
   initialState,
   reducers: {
     showLoginModal: (state) => {
