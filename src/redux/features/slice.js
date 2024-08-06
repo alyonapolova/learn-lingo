@@ -3,6 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   isShowLoginModal: false,
   isShowSignupModal: false,
+  isShowTrialLessonModal: false,
+  selectedTeacher: null,
   fav: [],
   isInFav: false,
 };
@@ -23,6 +25,14 @@ export const slice = createSlice({
     closeSignupModal: (state) => {
       state.isShowSignupModal = false;
     },
+    showTrialLessonModal: (state, action) => {
+      state.selectedTeacher = action.payload;
+      state.isShowTrialLessonModal = true;
+    },
+    closeTrialLessonModal: (state) => {
+      state.selectedTeacher = null;
+      state.isShowTrialLessonModal = false;
+    },
   },
 });
 
@@ -31,6 +41,8 @@ export const {
   closeLoginModal,
   showSignupModal,
   closeSignupModal,
+  showTrialLessonModal,
+  closeTrialLessonModal,
 } = slice.actions;
 
 export default slice.reducer;
