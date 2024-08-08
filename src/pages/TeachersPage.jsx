@@ -29,7 +29,9 @@ export const TeachersPage = () => {
 
   return (
     <>
-      <TeachersList {...teachers} />
+      {loading && <p>Loading teachers...</p>}
+      {error && <p className="text-red-500">Error: {error}</p>}
+      {!loading && !error && teachers && <TeachersList {...teachers} />}
       {showModal && <TrialLesson />}
     </>
   );

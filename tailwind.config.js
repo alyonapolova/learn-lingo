@@ -9,6 +9,7 @@ module.exports = {
       borderRadius: {
         '12px': '12px',
         '30px': '30px',
+        '35px': '35px',
       },
       borderWidth: {
         1: '1px',
@@ -21,6 +22,7 @@ module.exports = {
         1.33: '1.33',
       },
       colors: {
+        'bg-teachers': '#F8F8F8',
         'custom-gray': '#8A8A89',
         'custom-dark-opacity': 'rgba(18, 20, 23, 0.1)',
         'custom-yellow': '#F4C550',

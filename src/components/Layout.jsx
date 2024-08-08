@@ -6,6 +6,7 @@ export const Layout = () => {
   return (
     <div className="container">
       <AppNav />
+
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
